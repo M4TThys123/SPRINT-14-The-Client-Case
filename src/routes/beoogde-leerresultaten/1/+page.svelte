@@ -1,7 +1,7 @@
 <script>
   // import * as prismicH from "@prismicio/helpers";
   export let data;
-  // console.log(data);
+  console.log(data);
 </script>
 
 <main>

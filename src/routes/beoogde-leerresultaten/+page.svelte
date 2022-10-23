@@ -1,13 +1,15 @@
 <script>
   // import * as prismicH from "@prismicio/helpers";
   export let data;
+  console.log(data.documents[9].data.content);
   // console.log(data);
+
 </script>
 
 <main>
   <div class="container">
     <h1>CMD Minor</h1>
-    <pre>{JSON.stringify(data, null, 2)}</pre>
+    <pre>{JSON.stringify(data.documents[9].data, null, 2)}</pre>
   </div>
 </main>
 
