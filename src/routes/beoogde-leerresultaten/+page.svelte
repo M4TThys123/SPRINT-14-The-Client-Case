@@ -1,9 +1,14 @@
 <script>
-  // import * as prismicH from "@prismicio/helpers";
-  export let data;
-  console.log(data.documents[9].data.content);
-  // console.log(data);
+  // import * as prismicH from "@prismicio/helpers"
+  export let data
+  const uid = data.documents[0].uid
+  console.log(data.documents)
 
+  // 1.0 Beoogde leerresultaten
+  const arrHumanity = 5 //1.1
+  const arrCompetenties = 11 //1.2
+  const arrWerkveld = 2 //1.3
+  const arrOntwikkelingen = 4 //1.4
 </script>
 
 <main>
