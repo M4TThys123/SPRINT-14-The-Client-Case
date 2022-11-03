@@ -13,4 +13,9 @@
 
 <Footer/>
 
-<style></style>
+<style>
+    main{
+        margin-left: 400px;
+        padding: 2em;
+    }
+</style>

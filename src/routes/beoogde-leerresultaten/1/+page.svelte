@@ -1,12 +1,22 @@
 <script>
-  // import * as prismicH from "@prismicio/helpers";
+  import * as prismicH from "@prismicio/helpers";
   export let data;
   // console.log(data);
 
   const humanity = 5; //1.1
   const arrHumanity = data.documents[humanity].data;
-  console.log(arrHumanity.hoofdstuk);
+  console.log(arrHumanity);
+  // console.log(data);
 </script>
+
+<section>
+  <span>{arrHumanity.hoofdstuk}</span>
+  <h2>{arrHumanity[0]}</h2>
+  <div>
+    {@html prismicH.asHTML(arrHumanity.content)}
+  </div>
+</section>
+
 
 <!-- <section class="hero__section">
   <h1>1.0 Beoogde leerresultaten</h1>
@@ -16,6 +26,7 @@
   <span>{arrHumanity.hoofdstuk}</span>
   <h2>{arrHumanity.hoofdstuk}</h2>
 </section> -->
+xxxxxxxx
 
 
 
