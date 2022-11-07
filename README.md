@@ -1,7 +1,6 @@
 # SPRINT 14
-## The Client Case SveteKit applciation
-
-Welkom bij de Client Case wiki!
+## The Client Case SveteKit application
+Dit is een SvetleKit App voor de CMD Minor op basis van Prismic.io 
 
 ### 🧭 Navigeer door deze wiki heen.
 * [👀 Analyseren](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%91%80-Analyseren)
