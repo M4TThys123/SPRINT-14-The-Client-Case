@@ -1,4 +1,27 @@
-# create-svelte
+# SPRINT 14
+## The Client Case SveteKit applciation
+
+Welkom bij de Client Case wiki!
+
+### 🧭 Navigeer door deze wiki heen.
+* [👀 Analyseren](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%91%80-Analyseren)
+* [🎨 Ontwerpen](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%8E%A8-Ontwerpen)
+* [🔨 Bouwen](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%94%A8-Bouwen)
+* [⚙️ Intergreren](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%E2%9A%99%EF%B8%8F-Integreren)
+* [✨ Testen](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%E2%9C%A8-Testen)
+
+### 🧭 Navigeer door deze repository heen.
+* [💻 Code](https://github.com/M4TThys123/SPRINT-14-The-Client-Case)
+* [🛑 Issues](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/issues)
+* [📕 Project-Board](https://github.com/users/M4TThys123/projects/4/views/1?layout=board)
+* [🌐 Live Versie]()
+
+
+
+
+
+
+
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
