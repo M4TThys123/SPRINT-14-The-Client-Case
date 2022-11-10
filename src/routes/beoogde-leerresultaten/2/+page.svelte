@@ -1,21 +1,20 @@
 <script>
   import * as prismicH from "@prismicio/helpers";
-
-
-  console.log(navOpen)
+  export let data;
   // console.log(data);
 
-  const humanity = 5; //1.1
-  const arrHumanity = data.documents[humanity].data;
-  console.log(arrHumanity);
-  // console.log(data);
+  const Competenties = 11 //1.2
+
+  const arrCompetenties = data.documents[Competenties].data;
+  console.log(arrCompetenties);
+  console.log(data.documents);
 </script>
 
 <section>
-  <span>{arrHumanity.hoofdstuk}</span>
-  <h2>Humanity-centered digital designers</h2>
+  <span>{arrCompetenties.hoofdstuk}</span>
+  <h2>{arrCompetenties[0]}</h2>
   <div>
-    {@html prismicH.asHTML(arrHumanity.content)}
+    {@html prismicH.asHTML(arrCompetenties.content)}
   </div>
 </section>
 
