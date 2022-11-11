@@ -193,19 +193,22 @@
     <button class="closebtn" on:click={handleNav}>&times;</button>
   
     <section class="nav__icon--wrapper">
-      <button class="nav__icon"><a href="/"><i class="bx bxs-home" /></a></button>
+      <button class="nav__icon">
+        <a href="/">
+          <img src="images/Icon-home.png" alt="">
+        </a></button>
         <div class="nav__diveder" />
       <button class="nav__icon" on:click={navButtonEen} class:button__active={navHoofdstuk == hoofdstuk1}>
-        <i class="bx bxs-file-blank" />
+        <img src="images/nav_element1.png" alt="">
       </button>
       <button class="nav__icon" on:click={navButtonTwee} class:button__active={navHoofdstuk == hoofdstuk2}>
-        <i class="bx bxs-file-blank" />
+        <img src="images/nav_element2.png" alt="">
       </button>
       <button class="nav__icon" on:click={navButtonDrie} class:button__active={navHoofdstuk == hoofdstuk3}>
-        <i class="bx bxs-file-blank" />
+        <img src="images/nav_element3.png" alt="">
       </button>
       <button class="nav__icon" on:click={navButtonVier} class:button__active={navHoofdstuk == hoofdstuk4}>
-        <i class="bx bxs-file-blank" />
+        <img src="images/nav_element4.png" alt="">
       </button>
     </section>
   
