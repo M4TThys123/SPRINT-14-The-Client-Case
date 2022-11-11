@@ -46,43 +46,10 @@
   </section>
 </nav>
 
-<div class="nav__button--wrapper">
-  <button class="nav__button" id="nav__button" class:change={navOpen} on:click={handleNav}>
-      <i class='bx bx-menu'></i>
-      <!-- <div class="circle">22</div> -->
-  </button>
-</div>
-
-
 <style>
-  a:hover {
-    color: #f1f1f1;
-  }
-  /* HAMBURGER */
-  .nav__button--wrapper{
-  position: relative;
-}
-.nav__button{
-  font-size: 2.5em;   
-}
-.nav__button:hover{
-
-}
-
-/* CANGE CSS */
-.pushMainToRight {
-transform: translate3d(40%, 0, 0);
-/* 	margin-left: 40% */
-}	
-	
-.open {
-	width: 40%;
-}	
-
 /* NAV MENU */
   nav {
     display: flex;
-    /* position: absolute; */
     height: 100vh;
     max-width: 400px;
     width: 100%;

@@ -1,26 +1,99 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+/* VARIABLEN CSS */
+:root {
+  --yellow: #f4e500;
+  --cream-white: #f0ebf0;
+  --cream-red: #db504c;
+  --dark-grey: #2f3135;
+  --nav-accent-color: #50545b;
+  --nav-text-grey: #8e9296;
 }
 
-/* body{
-    background-color: #181818;
-} */
-
-.flex{
-    display: flex;
+/* BASIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Open sans;
 }
 
-/* .container {
-    padding: 5px;
-    width: 100%;
-    height: 500px;
-    border: 2px solid #58A6F8;
-    border-radius: 5px;
+/* ALGEMENE STYLING */
+ul {
+  list-style: none;
 }
-     */
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LAYOUT */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+/* HOMEPAGE */
+
+/* TEMPLATE PAGE */
+main span{
+    font-size: 1.3rem;
+    border: 2px solid black;
+    background-color: var(--yellow);
+    padding: .25rem;
+    margin-bottom: -2px;
+}
+
+main h2{
+    padding: .25rem;
+    margin-bottom: 1rem;
+    margin-top: 4px;
+    font-size: 1.3rem;
+    border: 2px solid black;
+}
+
+/* BREAKPOINTS */
+/* For small devices */
+@media screen and (max-width: 320px) {
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 767px) {
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+/* overbodig? */
+/* 
+@media only screen and (max-width: 600px) {
+  main {
+    /* margin-left: 400px; */
+    /* max-width: 800px; */
+    /* width: 100%; */
+  /* } */
+/* } */

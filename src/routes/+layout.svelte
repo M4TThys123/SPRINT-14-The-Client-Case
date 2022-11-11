@@ -188,82 +188,176 @@
     navHoofdstuk = hoofdstuk4;
   }
 </script>
-
 <div class="flex">
+  <nav class="sidenav" class:open={navOpen}>
+    <button class="closebtn" on:click={handleNav}>&times;</button>
+  
+    <section class="nav__icon--wrapper">
+      <button class="nav__icon"><a href="/"><i class="bx bxs-home" /></a></button>
+        <div class="nav__diveder" />
+      <button class="nav__icon" on:click={navButtonEen} class:button__active={navHoofdstuk == hoofdstuk1}>
+        <i class="bx bxs-file-blank" />
+      </button>
+      <button class="nav__icon" on:click={navButtonTwee} class:button__active={navHoofdstuk == hoofdstuk2}>
+        <i class="bx bxs-file-blank" />
+      </button>
+      <button class="nav__icon" on:click={navButtonDrie} class:button__active={navHoofdstuk == hoofdstuk3}>
+        <i class="bx bxs-file-blank" />
+      </button>
+      <button class="nav__icon" on:click={navButtonVier} class:button__active={navHoofdstuk == hoofdstuk4}>
+        <i class="bx bxs-file-blank" />
+      </button>
+    </section>
+  
+    <section class="nav__link--wrapper">
+      <header class="nav__header">
+        <h2>1.0 Beoogde leerresultaten</h2>
+      </header>
+      <ul class="nav__list">
+        {#each navHoofdstuk as paragraaf}
+        <li class="nav__item" class:nav__item--active={$page.url.pathname === paragraaf.route}>
+          <a
+            class="nav__link" 
+            href={paragraaf.route}
+            class:nav__link--active={$page.url.pathname === paragraaf.route}
+          >
+            {paragraaf.name}
+          </a>
+        </li>
+      {/each}
+      </ul>
+    </section>
+  </nav>
+
+  <button class="hamButton" class:pushMainToRight={navOpen} on:click={handleNav}>
+    <i class="bx bx-menu-alt-left" />
+  </button>
+
   <main class="" class:pushMainToRight={navOpen}>
     <slot />
   </main>
 </div>
 
-<!-- <Footer/> -->
 <style>
-@media only screen and (max-width: 600px) {
-
-    main{
-        /* margin-left: 400px; */
-        max-width: 800px;
-        width: 100%;
-
-    }
-  }
-
-
-    :global(:root){
-    --yellow: #F4E500;
-    --cream-white: #F0EBF0;
-    --cream-red: #DB504C;
-    --dark-grey: #2F3135;
-    --nav-accent-color: #50545B;
-    --nav-text-grey: #8E9296;
-  }
-  :global(*) {
-    font-family: Open sans;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    color: black;
-  }
-  :global(button){
-    border: none;
-    background: none;
+  /* Hamburger Menu icon */
+  .hamButton {
+    position: absolute;
+    left: 20px;
+    display: inline-block;
     cursor: pointer;
+    z-index: 2;
+    font-size: 2.5em;
+    transition: 0.3s;
   }
-  :global(a){
-    text-decoration: none;
-    list-style: none;
-  }  
-  :global(li){
-    list-style: none;
+/* DOM MAIPULATION */
+.pushMainToRight {
+    position: absolute;
+    transform: translate3d(400px, 0, 0);
+  }
+  .open {
+    transform: translate3d(0px, 0, 0);
   }
 
-  :global(.tranform__left){
-    transform: translate(-400px, 0px);
-  }
-  :global(.tranform__right){
-    transform: translate(400px, 0px);
-  }
-  :global(.block-img img){
+/* NAV MENU */
+nav {
+    display: flex;
+
+    height: 100vh;
+    max-width: 400px;
     width: 100%;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: #2f3135;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+    transition: 0.3s;
+    transform: translate3d(-400px, 0, 0);
+  }
+  nav a{
+    transition: 0.3s;
+  }
+  .nav__icon--wrapper {
+    background-color: var(--yellow);
+    min-width: 72px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav__icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 50%;
+    margin-bottom: 1em;
   }
 
-  /* Algemen page style */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .nav__icon:first-child {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  .nav__icon i {
+    font-size: 2.5em;
+    color: #f0ebf0;
+  }
+  .nav__diveder {
+    height: 2px;
+    width: 32px;
+    border-radius: 5px;
+    background-color: #000;
+    margin-bottom: 1em;
+  }
+  .nav__link--wrapper {
+    background-color: var(--dark-grey);
+    width: calc(400px - 72px);
+  }
 
-  :global(main span){
-    font-size: 1.3rem;
-    border: 2px solid black;
+  .nav__header {
     background-color: var(--yellow);
-    padding: .25rem;
-    margin-bottom: -2px;
-}
+    padding-left: 1em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
 
-:global(main h2){
-    padding: .25rem;
-    margin-bottom: 1rem;
-    margin-top: 4px;
-    font-size: 1.3rem;
-    border: 2px solid black;
-}
+  .nav__list {
+    padding: 1em;
+  }
 
+  .nav__item {
+    margin-bottom: 1em;
+    padding: 2px 4px;
+  }
+  .nav__link {
+    color: var(--nav-text-grey);
+    font-size: 22px;
+  }
+  .nav__item--active {
+    background-color: var(--nav-accent-color);
+    border-radius: 3px;
+  }
+  .nav__link--active {
+    color: #fff;
+  }
+
+/* MAIN */
+main{
+  transition: all 0.3s;
+}
 
 </style>
