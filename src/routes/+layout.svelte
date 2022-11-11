@@ -1,5 +1,6 @@
 <script>
   import { page } from "$app/stores";
+  import PageHeader from "../components/+page-header.svelte";
 
   let navOpen = false;
 
@@ -11,7 +12,7 @@
     {
       id: 1.1,
       name: "1.1 Humanity-centered digital designers",
-      route: "/beoogde-leerresultaten/",
+      route: "/beoogde-leerresultaten",
       hoofdstuk: 1,
       apiId: 5,
     },
@@ -170,7 +171,7 @@
     },
   ];
 
-  let navHoofdstuk = hoofdstuk4;
+  let navHoofdstuk = hoofdstuk1;
 
   function navButtonEen() {
     navHoofdstuk = hoofdstuk1;
@@ -188,56 +189,82 @@
     navHoofdstuk = hoofdstuk4;
   }
 </script>
+
 <div class="flex">
   <nav class="sidenav" class:open={navOpen}>
     <button class="closebtn" on:click={handleNav}>&times;</button>
-  
+
     <section class="nav__icon--wrapper">
       <button class="nav__icon">
         <a href="/">
-          <img src="images/Icon-home.png" alt="">
-        </a></button>
-        <div class="nav__diveder" />
-      <button class="nav__icon" on:click={navButtonEen} class:button__active={navHoofdstuk == hoofdstuk1}>
-        <img src="images/nav_element1.png" alt="">
+          <img class="nav__img home" src="images/Icon-home.png" alt="" />
+        </a></button
+      >
+      <div class="nav__diveder" />
+      <button
+        class="nav__icon"
+        on:click={navButtonEen}
+        class:button__active={navHoofdstuk == hoofdstuk1}
+      >
+        <img class="nav__img" src="images/nav_element1.png" alt="" />
       </button>
-      <button class="nav__icon" on:click={navButtonTwee} class:button__active={navHoofdstuk == hoofdstuk2}>
-        <img src="images/nav_element2.png" alt="">
+      <button
+        class="nav__icon"
+        on:click={navButtonTwee}
+        class:button__active={navHoofdstuk == hoofdstuk2}
+      >
+        <img class="nav__img" src="images/nav_element2.png" alt="" />
       </button>
-      <button class="nav__icon" on:click={navButtonDrie} class:button__active={navHoofdstuk == hoofdstuk3}>
-        <img src="images/nav_element3.png" alt="">
+      <button
+        class="nav__icon"
+        on:click={navButtonDrie}
+        class:button__active={navHoofdstuk == hoofdstuk3}
+      >
+        <img class="nav__img" src="images/nav_element3.png" alt="" />
       </button>
-      <button class="nav__icon" on:click={navButtonVier} class:button__active={navHoofdstuk == hoofdstuk4}>
-        <img src="images/nav_element4.png" alt="">
+      <button
+        class="nav__icon"
+        on:click={navButtonVier}
+        class:button__active={navHoofdstuk == hoofdstuk4}
+      >
+        <img class="nav__img" src="images/nav_element4.png" alt="" />
       </button>
     </section>
-  
+
     <section class="nav__link--wrapper">
       <header class="nav__header">
         <h2>1.0 Beoogde leerresultaten</h2>
       </header>
       <ul class="nav__list">
         {#each navHoofdstuk as paragraaf}
-        <li class="nav__item" class:nav__item--active={$page.url.pathname === paragraaf.route}>
-          <a
-            class="nav__link" 
-            href={paragraaf.route}
-            class:nav__link--active={$page.url.pathname === paragraaf.route}
+          <li
+            class="nav__item"
+            class:nav__item--active={$page.url.pathname === paragraaf.route}
           >
-            {paragraaf.name}
-          </a>
-        </li>
-      {/each}
+            <a
+              class="nav__link"
+              href={paragraaf.route}
+              class:nav__link--active={$page.url.pathname === paragraaf.route}
+            >
+              {paragraaf.name}
+            </a>
+          </li>
+        {/each}
       </ul>
     </section>
   </nav>
 
-  <button class="hamButton" class:pushMainToRight={navOpen} on:click={handleNav}>
-    <i class="bx bx-menu-alt-left" />
-  </button>
-
   <main class="" class:pushMainToRight={navOpen}>
-    <slot />
+    <header class="header">
+      <button
+        class="hamButton"
+        on:click={handleNav}
+      >
+        <i class="bx bx-menu-alt-left" />
+      </button>
+    </header>
+    <PageHeader />
+    <slot/>
   </main>
 </div>
 
@@ -246,14 +273,15 @@
   .hamButton {
     position: absolute;
     left: 20px;
+    top: 5px;
     display: inline-block;
     cursor: pointer;
     z-index: 2;
-    font-size: 2.5em;
+    font-size: 50px;
     transition: 0.3s;
   }
-/* DOM MAIPULATION */
-.pushMainToRight {
+  /* DOM MAIPULATION */
+  .pushMainToRight {
     position: absolute;
     transform: translate3d(400px, 0, 0);
   }
@@ -261,8 +289,8 @@
     transform: translate3d(0px, 0, 0);
   }
 
-/* NAV MENU */
-nav {
+  /* NAV MENU */
+  nav {
     display: flex;
 
     height: 100vh;
@@ -281,7 +309,7 @@ nav {
     transition: 0.3s;
     transform: translate3d(-400px, 0, 0);
   }
-  nav a{
+  nav a {
     transition: 0.3s;
   }
   .nav__icon--wrapper {
@@ -301,23 +329,33 @@ nav {
     background: #000;
     border-radius: 50%;
     margin-bottom: 1em;
+    transition: 0.3s;
+  }
+
+  .button__active {
+    border-radius: 30%;
   }
 
   .sidenav .closebtn {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 25px;
-    font-size: 36px;
+    font-size: 50px;
     margin-left: 50px;
   }
   .nav__icon:first-child {
     margin-bottom: 1em;
     margin-top: 1em;
   }
-  .nav__icon i {
-    font-size: 2.5em;
-    color: #f0ebf0;
+  .nav__img,
+  .home {
+    max-width: 40px;
+    box-shadow: -5px 5px 25px 3px rgba(240, 235, 240, 0.6);
   }
+  .nav__icon {
+    padding-top: 4px;
+  }
+
   .nav__diveder {
     height: 2px;
     width: 32px;
@@ -358,9 +396,8 @@ nav {
     color: #fff;
   }
 
-/* MAIN */
-main{
-  transition: all 0.3s;
-}
-
+  /* MAIN */
+  main {
+    transition: all 0.3s;
+  }
 </style>

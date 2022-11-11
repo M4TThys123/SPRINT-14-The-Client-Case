@@ -50,9 +50,42 @@ img {
 .grid {
   display: grid;
 }
+.row{
+  width: 100%;
+  max-width: 1000px;
+  padding: 2em;
+}
+
+.prismic__row{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: .5em;
+}
+.prismic__row *{
+  margin-bottom: 1em;
+}
+
+.container{
+  padding: 56px 0;
+}
+
+
+/* ALGEMEN PAGE STYLING */
+.header{
+  width: 100%;
+  height: 80px;
+  background-color: var(--yellow);
+}
+
+main{
+  max-width: 1000px;
+}
 /* HOMEPAGE */
 
 /* TEMPLATE PAGE */
+
+
 main span{
     font-size: 1.3rem;
     border: 2px solid black;
