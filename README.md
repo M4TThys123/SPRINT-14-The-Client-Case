@@ -13,7 +13,7 @@ Dit is een SvetleKit App voor de CMD Minor op basis van Prismic.io
 * [💻 Code](https://github.com/M4TThys123/SPRINT-14-The-Client-Case)
 * [🛑 Issues](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/issues)
 * [📕 Project-Board](https://github.com/users/M4TThys123/projects/4/views/1?layout=board)
-* [🌐 Live Versie]()
+* [🌐 Live Versie](https://sprint-14-the-client-case.vercel.app/beoogde-leerresultaten)
 
 
 
