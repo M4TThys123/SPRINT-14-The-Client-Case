@@ -4,6 +4,7 @@ Dit is een SvetleKit App voor de CMD Minor op basis van Prismic.io
 
 ### 🧭 Navigeer door deze wiki heen.
 * [👀 Analyseren](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%91%80-Analyseren)
+* [📄 Debriefing](https://github.com/M4TThys123/SRINT-14-Debriefing/blob/main/README.md)
 * [🎨 Ontwerpen](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%8E%A8-Ontwerpen)
 * [🔨 Bouwen](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%F0%9F%94%A8-Bouwen)
 * [⚙️ Intergreren](https://github.com/M4TThys123/SPRINT-14-The-Client-Case/wiki/%E2%9A%99%EF%B8%8F-Integreren)
